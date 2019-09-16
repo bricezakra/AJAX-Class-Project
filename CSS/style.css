@@ -7,3 +7,9 @@ h1{
     color: white;
     font-family: 'Courier New', Courier, monospace;
 }
+
+.userInput{
+    width: 99%;
+    margin-left: 3px;
+    margin-right: 20px;
+}
