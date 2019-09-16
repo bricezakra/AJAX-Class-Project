@@ -1,0 +1,121 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+PS C:\Users\Jedidiah Garza\Desktop\AJAX-Class-Project> git push -u  ui
+fatal: 'ui' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+PS C:\Users\Jedidiah Garza\Desktop\AJAX-Class-Project> git merge Ui
+merge: Ui - not something we can merge
+PS C:\Users\Jedidiah Garza\Desktop\AJAX-Class-Project> git branch
+* master
+PS C:\Users\Jedidiah Garza\Desktop\AJAX-Class-Project> git pull
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 1), reused 2 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From github.com:bricezakra/AJAX-Class-Project
+ * [new branch]      UI         -> origin/UI
+Already up to date.
+PS C:\Users\Jedidiah Garza\Desktop\AJAX-Class-Project> git branch
+* master
+PS C:\Users\Jedidiah Garza\Desktop\AJAX-Class-Project> git branch
+* master
+PS C:\Users\Jedidiah Garza\Desktop\AJAX-Class-Project> git branch UI
+PS C:\Users\Jedidiah Garza\Desktop\AJAX-Class-Project> git branch API
+PS C:\Users\Jedidiah Garza\Desktop\AJAX-Class-Project>
+PS C:\Users\Jedidiah Garza\Desktop\AJAX-Class-Project> git branch
+  API
+  UI
+* master
+PS C:\Users\Jedidiah Garza\Desktop\AJAX-Class-Project> git checkout API
+Switched to branch 'API'
+M       api.html
+PS C:\Users\Jedidiah Garza\Desktop\AJAX-Class-Project> git pull origin API
+fatal: couldn't find remote ref API
+PS C:\Users\Jedidiah Garza\Desktop\AJAX-Class-Project> git checkout master
+Switched to branch 'master'
+M       api.html
+Your branch is up to date with 'origin/master'.
+PS C:\Users\Jedidiah Garza\Desktop\AJAX-Class-Project> git pull
+Already up to date.
+PS C:\Users\Jedidiah Garza\Desktop\AJAX-Class-Project> git fetch -v
+From github.com:bricezakra/AJAX-Class-Project
+ = [up to date]      master     -> origin/master
+ = [up to date]      UI         -> origin/UI
+PS C:\Users\Jedidiah Garza\Desktop\AJAX-Class-Project> git checkout UI
+Switched to branch 'UI'
+M       api.html
+PS C:\Users\Jedidiah Garza\Desktop\AJAX-Class-Project> git pull origin UI
+From github.com:bricezakra/AJAX-Class-Project
+ * branch            UI         -> FETCH_HEAD
+Auto-merging index.html
+CONFLICT (content): Merge conflict in index.html
+Automatic merge failed; fix conflicts and then commit the result.
+PS C:\Users\Jedidiah Garza\Desktop\AJAX-Class-Project> git status
+On branch UI
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+
+        both modified:   index.html
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   api.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        CSS/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS C:\Users\Jedidiah Garza\Desktop\AJAX-Class-Project> git add .
+warning: CRLF will be replaced by LF in CSS/style.css.
+The file will have its original line endings in your working directory
+PS C:\Users\Jedidiah Garza\Desktop\AJAX-Class-Project> git commit -m "fixed merge conflict"
+[UI 79093bb] fixed merge conflict
+PS C:\Users\Jedidiah Garza\Desktop\AJAX-Class-Project> git status
+On branch UI
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS C:\Users\Jedidiah Garza\Desktop\AJAX-Class-Project> git commit -m 'made changes'
+On branch UI
+Changes not staged for commit:
+        modified:   index.html
+
+no changes added to commit
+PS C:\Users\Jedidiah Garza\Desktop\AJAX-Class-Project> git add .
+PS C:\Users\Jedidiah Garza\Desktop\AJAX-Class-Project> git commit -m 'made changes'
+[UI 51f7e27] made changes
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+PS C:\Users\Jedidiah Garza\Desktop\AJAX-Class-Project> git push origin UI
+Enumerating objects: 15, done.
+Counting objects: 100% (14/14), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (8/8), done.
+Writing objects: 100% (9/9), 1.13 KiB | 579.00 KiB/s, done.
+Total 9 (delta 3), reused 0 (delta 0)
+remote: Resolving deltas: 100% (3/3), completed with 1 local object.
+To github.com:bricezakra/AJAX-Class-Project.git
+   6825427..51f7e27  UI -> UI
+PS C:\Users\Jedidiah Garza\Desktop\AJAX-Class-Project> git merge master
+Already up to date.
+PS C:\Users\Jedidiah Garza\Desktop\AJAX-Class-Project> git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+PS C:\Users\Jedidiah Garza\Desktop\AJAX-Class-Project> git checkout UI
+Switched to branch 'UI'
